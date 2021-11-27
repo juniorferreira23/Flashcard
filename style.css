@@ -30,6 +30,10 @@ header .container{
     padding: 10px 0;
 }
 
+header .logo {
+    margin-left: 10px;
+}
+
 header li {
     display: inline-block;
     margin: 0 10px;
@@ -47,18 +51,14 @@ header li:hover {
 
 .creator-flash{
     margin: 20px 0;
-    height: 40vh;
 }
 
 .creator-flash .container{
     display: flex;
     flex-direction: column;
+    width: 90%;
     max-width: 400px;
     box-shadow: rgba(0, 0, 0, 0.9) 0px 2px 4px 0px;
-    position: absolute;
-    top: 40px;
-    left: 50%;
-    transform: translateX(-50%);
     background-color: white;
 }
 
@@ -67,7 +67,7 @@ header li:hover {
     padding: 10px;
 }
 
-.creator-flash label {
+.creator-flash label, .creator-flash .buttons {
     width: 90%;
     margin: 0 auto;
     padding: 7px 0;
@@ -80,11 +80,6 @@ header li:hover {
     margin: 0 auto;
 }
 
-.creator-flash .buttons {
-    width: 90%;
-    margin: 0 auto;
-}
-
 .creator-flash .buttons button{
     width: 50px;
     height: 28px;
@@ -92,6 +87,7 @@ header li:hover {
     border: 1px solid rgb(182, 182, 182);
     border-radius: 5px;
     margin: 10px 5px 10px 0;
+    font-weight: bold;
 }
 
 .container-flashcard .container {
@@ -121,4 +117,23 @@ header li:hover {
 }
 
 
+@media screen and (max-width: 900px) {
+    header .container{
+        flex-direction: column;
+    }
 
+    header .logo {
+        padding: 5px 0;
+        margin: 0;
+    }
+
+    .flashcard {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .flashcard {
+        width: 90%;
+    }
+}
